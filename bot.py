@@ -108,7 +108,8 @@ async def serverinfo(interaction: discord.Interaction) -> None:
     embed.add_field(name="Members", value=str(guild.member_count or "unknown"))
     embed.add_field(name="Channels", value=str(len(guild.channels)))
     embed.add_field(name="Owner", value=f"<@{guild.owner_id}>")
-    embed.set_thumbnail(url=guild.icon.url if guild.icon else discord.Embed.Empty)
+    if guild.icon:
+        embed.set_thumbnail(url=guild.icon.url)
     await interaction.response.send_message(embed=embed)
 
 
