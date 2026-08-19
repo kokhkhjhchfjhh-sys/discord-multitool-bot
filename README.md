@@ -19,7 +19,7 @@ A lightweight, modular Discord bot written in Python for Termux and other Linux 
 ```bash
 pkg update -y
 pkg install python git -y
-git clone https://github.com/YOUR_USERNAME/discord-multitool-bot.git
+git clone https://github.com/kokhkhjhchfjhh-sys/discord-multitool-bot.git
 cd discord-multitool-bot
 python -m pip install -r requirements.txt
 cp .env.example .env
